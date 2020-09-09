@@ -30,43 +30,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-function configure_zram_parameters() {
-	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-	MemTotal=${MemTotalStr:16:8}
-
-	let RamSizeGB="( $MemTotal / 1048576 ) + 1"
-	diskSizeUnit=M
-	# Zram disk - 75%
-	let zRamSizeMB="( $RamSizeGB * 1024 ) * 3 / 4"
-
-	# use MB avoid 32 bit overflow
-	if [ $zRamSizeMB -gt 6144 ]; then
-		let zRamSizeMB=6144
-	fi
-
-	# And enable lz4kd zram compression for Go targets.
-        echo lz4kd > /sys/block/zram0/comp_algorithm
-
-	if [ -f /sys/block/zram0/disksize ]; then
-		if [ -f /sys/block/zram0/use_dedup ]; then
-			echo 1 > /sys/block/zram0/use_dedup
-		fi
-		echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
-
-		# ZRAM may use more memory than it saves if SLAB_STORE_USER
-		# debug option is enabled.
-		if [ -e /sys/kernel/slab/zs_handle ]; then
-			echo 0 > /sys/kernel/slab/zs_handle/store_user
-		fi
-		if [ -e /sys/kernel/slab/zspage ]; then
-			echo 0 > /sys/kernel/slab/zspage/store_user
-		fi
-
-		mkswap /dev/block/zram0
-		swapon /dev/block/zram0 -p 32758
-	fi
-}
-
 function configure_read_ahead_kb_values() {
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
@@ -153,14 +116,12 @@ function configure_min_free_kbytes()
 function configure_memory_parameters() {
 	# Set Memory parameters.
 
-	configure_zram_parameters
 	configure_read_ahead_kb_values
 	configure_thp
 	# Enabling or disabling thp will reset the value of min_free_kbytes
 	# Call configure_min_free_kbytes after
 	configure_min_free_kbytes
 
-	echo 100 > /proc/sys/vm/swappiness
 
 	# Disable periodic kcompactd wakeups. We do not use THP, so having many
 	# huge pages is not as necessary.
