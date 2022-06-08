@@ -2829,7 +2829,6 @@ vendor/lib64/vendor.qti.snapdragonServices-V1-ndk.so
 vendor/lib64/vendor.qti.snapdragonServices.qape-V1-ndk.so
 
 # QMI
-vendor/bin/irsc_util
 vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
@@ -2837,7 +2836,6 @@ vendor/bin/qrtr-ns
 vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
 vendor/etc/init/vendor.qti.smp2p.rc
-vendor/etc/sec_config
 vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/lib64/libdiag.so
 vendor/lib64/libdiagatbparser.so
