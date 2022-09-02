@@ -180,7 +180,7 @@ vendor.media.omx=0
 # Media (steps)
 ro.config.alarm_vol_steps=15
 ro.config.media_vol_default=10
-ro.config.media_vol_steps=15
+ro.config.media_vol_steps=25
 ro.config.system_vol_steps=15
 ro.config.vc_call_vol_steps=11
 
