@@ -370,6 +370,36 @@
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
+        },
+        {
+            "Name": "UclampTAMin",
+            "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
+            "Values": [
+                "0",
+                "20"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "UclampTALatency",
+            "Path": "/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "UclampFGMin",
+            "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
+            "Values": [
+                "0",
+                "15"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
         }
     ],
     "Actions": [
@@ -432,6 +462,18 @@
             "Node": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccMaxFreq",
             "Value": "933000",
             "Duration": 0
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "UclampTAMin",
+            "Duration": 0,
+            "Value": "20"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "UclampTALatency",
+            "Duration": 0,
+            "Value": "1"
         },
         {
             "PowerHint": "LAUNCH",
@@ -498,6 +540,18 @@
             "Node": "sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveLevel1",
             "Value": "1190400",
             "Duration": 2000
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "UclampTAMin",
+            "Duration": 1000,
+            "Value": "20"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "UclampFGMin",
+            "Duration": 1000,
+            "Value": "15"
         },
         {
             "PowerHint": "CAMERA_STREAMING_LOW",

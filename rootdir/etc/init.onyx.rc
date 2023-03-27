@@ -235,16 +235,6 @@ on property:sys.boot_completed=1
     setprop vendor.powerhal.init 1
 
     # Uclamp tunings
-    #top-app
-    write /dev/cpuctl/top-app/cpu.uclamp.max max
-    write /dev/cpuctl/top-app/cpu.uclamp.min 20
-    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
-
-    #foreground
-    write /dev/cpuctl/foreground/cpu.uclamp.max max
-    write /dev/cpuctl/foreground/cpu.uclamp.min 0
-    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
-
     #background
     write /dev/cpuctl/background/cpu.uclamp.max 50
     write /dev/cpuctl/background/cpu.uclamp.min 0
