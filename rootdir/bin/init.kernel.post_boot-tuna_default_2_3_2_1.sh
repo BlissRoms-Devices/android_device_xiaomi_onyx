@@ -73,6 +73,10 @@ if [ -d /proc/sys/walt ]; then
 	echo 0 > /proc/sys/walt/sched_sbt_delay_windows
 	echo 0x60 > /proc/sys/walt/sched_sbt_pause_cpus
 
+	# Report max frequency to unity tasks.
+	echo "UnityMain,libunity.so,libil2cpp.so,com.miHoYo.,com.pubg.imobile,com.pubg.,com.activision." > /proc/sys/walt/sched_lib_name
+	echo 255 > /proc/sys/walt/sched_lib_mask_force
+
 	# Setting b.L scheduler parameters
 	echo 95 95 95 > /proc/sys/walt/sched_upmigrate
 	echo 85 85 85 > /proc/sys/walt/sched_downmigrate
