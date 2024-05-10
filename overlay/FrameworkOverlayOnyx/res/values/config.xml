@@ -69,6 +69,9 @@
         <item>"/vendor/lib64/libgsl.so"</item>
     </string-array>
 
+    <!-- Bytes that the PinnerService will pin for Home app -->
+    <integer name="config_pinnerHomePinBytes">6291456</integer>
+
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
     <integer name="config_shutdownBatteryTemperature">580</integer>
 
