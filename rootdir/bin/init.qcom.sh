@@ -149,28 +149,6 @@ case "$baseband" in
 esac
 
 case "$target" in
-    "msm7630_surf" | "msm7630_1x" | "msm7630_fusion")
-        if [ -f /sys/devices/soc0/hw_platform ]; then
-            value=`cat /sys/devices/soc0/hw_platform`
-        else
-            value=`cat /sys/devices/system/soc/soc0/hw_platform`
-        fi
-        case "$value" in
-            "Fluid")
-             start profiler_daemon;;
-        esac
-        ;;
-    "msm8660" )
-        if [ -f /sys/devices/soc0/hw_platform ]; then
-            platformvalue=`cat /sys/devices/soc0/hw_platform`
-        else
-            platformvalue=`cat /sys/devices/system/soc/soc0/hw_platform`
-        fi
-        case "$platformvalue" in
-            "Fluid")
-                start profiler_daemon;;
-        esac
-        ;;
     "msm8960")
         case "$baseband" in
             "msm")
@@ -182,21 +160,9 @@ case "$target" in
         else
             platformvalue=`cat /sys/devices/system/soc/soc0/hw_platform`
         fi
-        case "$platformvalue" in
-             "Fluid")
-                 start profiler_daemon;;
-             "Liquid")
-                 start profiler_daemon;;
-        esac
         ;;
     "msm8974")
         platformvalue=`cat /sys/devices/soc0/hw_platform`
-        case "$platformvalue" in
-             "Fluid")
-                 start profiler_daemon;;
-             "Liquid")
-                 start profiler_daemon;;
-        esac
         case "$baseband" in
             "msm")
                 start_battery_monitor
@@ -239,12 +205,6 @@ case "$target" in
         ;;
     "apq8084")
         platformvalue=`cat /sys/devices/soc0/hw_platform`
-        case "$platformvalue" in
-             "Fluid")
-                 start profiler_daemon;;
-             "Liquid")
-                 start profiler_daemon;;
-        esac
         ;;
     "msm8226")
         start_charger_monitor
