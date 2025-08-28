@@ -13,7 +13,6 @@ genfscon sysfs /devices/platform/soc/soc:spf_core_platform/soc:spf_core_platform
 
 # Fingerprint
 genfscon sysfs /devices/virtual/touch/touch_dev/fod_press_status u:object_r:sysfs_tp_fodstatus:s0
-genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_state u:object_r:sysfs_tp_fodstatus:s0
 
 # Info 
 genfscon sysfs /kernel/hardware_info_to_dump/hardw_info u:object_r:vendor_sysfs_hardwareinfo:s0
@@ -43,6 +42,8 @@ genfscon sysfs /devices/virtual/xm_power/wireless_master u:object_r:vendor_sysfs
 
 # Sensors
 genfscon sysfs /devices/virtual/touch/touch_dev/fod_longpress_gesture_enabled u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_enabled u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/gesture_single_tap_state u:object_r:vendor_sysfs_sensors:s0
 
 # Touchfeature
 genfscon proc /tp_fw_version u:object_r:proc_tp_file:s0
