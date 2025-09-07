@@ -106,7 +106,7 @@ vendor.display.support_video_mode_30hz_aod=0
 ro.vendor.qti.va_odm.support=1
 
 # RIL
-ro.telephony.default_network=33,33
+ro.telephony.default_network=26,26
 persist.vendor.radio.dynamic_sar=1
 
 # Sensor
