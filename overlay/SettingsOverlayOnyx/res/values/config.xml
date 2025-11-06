@@ -55,4 +55,7 @@
 
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar">90</integer>
+
+    <!-- Bliss Maintainer -->
+    <string name="bliss_maintainer">ROMGHARTI|K4LCHAKRA</string>
 </resources>
