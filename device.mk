@@ -167,6 +167,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.usap_refill_threshold?=1 \
     dalvik.vm.usap_pool_refill_delay_ms?=3000
 
+# DebugFS
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
 # Dex2oat (Compile SystemServer & SystemUI on device with `speed`)
 PRODUCT_SYSTEM_PROPERTIES += \
     dalvik.vm.systemservercompilerfilter=speed \
