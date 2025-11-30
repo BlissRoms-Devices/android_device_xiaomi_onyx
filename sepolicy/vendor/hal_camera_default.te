@@ -3,3 +3,5 @@ allow hal_camera_default miev_device:chr_file { write open read ioctl getattr se
 
 allow hal_camera_default proc_pressure_cpu:file r_file_perms;
 allow hal_camera_default proc_pressure_io:file r_file_perms;
+
+allow hal_camera_default system_data_file:dir { search getattr };
