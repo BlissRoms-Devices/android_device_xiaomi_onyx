@@ -198,6 +198,11 @@ include vendor/bliss/config/BoardConfigReservedSize.mk
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sun
 
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /vendor/firmware_mnt:/firmware \
+    /vendor/bt_firmware:/bt_firmware \
+    /vendor/dsp:/dsp
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
