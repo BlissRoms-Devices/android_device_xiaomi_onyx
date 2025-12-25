@@ -29,7 +29,6 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
-import /vendor/etc/init/hw/init.qti.kernel.test.rc
 import /vendor/etc/init/hw/init.qti.kernel.target.rc
 
 service memory-post-boot /vendor/bin/sh /vendor/bin/init.kernel.post_boot-memory.sh
