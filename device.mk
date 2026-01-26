@@ -87,7 +87,8 @@ PRODUCT_PACKAGES += \
     libalsautilsv2.vendor \
     libaudioutils_shim \
     libmediautils_vendor.vendor \
-    libmemunreachable.vendor
+    libmemunreachable.vendor \
+    qti-audio-types-aidl-V1-ndk.vendor
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8750/audio/primary-hal
 
