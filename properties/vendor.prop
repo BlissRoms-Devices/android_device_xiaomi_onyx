@@ -78,9 +78,6 @@ persist.sys.fuse.passthrough.enable=true
 vendor.gatekeeper.disable_spu=true
 vendor.gatekeeper.is_security_level_spu=0
 
-# GPS
-persist.backup.ntpServer=0.pool.ntp.org
-
 # Graphics
 debug.graphics.game_default_frame_rate.disabled=1
 debug.mdpcomp.logs=0
@@ -160,7 +157,6 @@ ro.hardware.keystore_desede=true
 debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
 media.c2.hal.selection=aidl
-ro.mediaserver.64b.enable=true
 vendor.media.omx=0
 
 # Media (steps)
