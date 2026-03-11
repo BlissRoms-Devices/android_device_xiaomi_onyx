@@ -893,4 +893,11 @@
 
     <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
     <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
+	
+	<!-- The list of package IDs that are allowed to skip camera high frame rate checks. -->
+    <string-array name="config_cameraHFRPrivAppList" translatable="false">
+        <item>com.android.camera</item>
+	    <item>com.instagram.android</item>
+        <item>com.snapchat.android</item>
+    </string-array>
 </resources>
