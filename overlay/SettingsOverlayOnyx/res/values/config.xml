@@ -58,4 +58,7 @@
 
     <!-- Bliss Maintainer -->
     <string name="bliss_maintainer">ROMGHARTI|K4LCHAKRA</string>
+
+    <!-- Uses the legacy UDFPS enrollment UI with side text instead of a footer button. -->
+    <bool name="config_useLegacyUdfpsUi">true</bool>
 </resources>
