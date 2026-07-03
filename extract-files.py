@@ -125,6 +125,8 @@ blob_fixups: blob_fixups_user_type = {
         'odm/etc/camera/motiontuning.xml'
     ): blob_fixup()
         .regex_replace('xml=version', 'xml version'),
+    'odm/lib64/anc.hal.so': blob_fixup()
+        .add_needed('libion.so'),
 
     'odm/lib64/camera/components/com.mi.node.tsskinbeautifier.so': blob_fixup()
         .call(
