@@ -196,10 +196,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.enable_adpf_cpu_hint=true \
     debug.hwui.use_hint_manager=true
 
-# Fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
 # Fingerprint
 $(call soong_config_set,XIAOMI_BIOMETRICS_FINGERPRINT,IMPL_VER,V2)
 PRODUCT_PACKAGES += \
