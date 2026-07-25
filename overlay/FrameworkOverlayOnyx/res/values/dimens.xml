@@ -26,4 +26,10 @@
 
     <!-- Default paddings for content around the corners. -->
     <dimen name="rounded_corner_content_padding">14dp</dimen>
+
+    <!-- Float variant of the fast auto-brightness ramp rate, used by the
+         brightness-as-float code path (config_brightness_ramp_rate_fast in
+         config.xml covers the legacy integer path). Value extracted from
+         stock HyperOS firmware for onyx. -->
+    <dimen name="config_brightnessRampRateFast">0.41590282</dimen>
 </resources>
