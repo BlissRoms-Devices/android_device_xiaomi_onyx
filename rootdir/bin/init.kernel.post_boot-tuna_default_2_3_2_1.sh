@@ -180,8 +180,9 @@ fi
 echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 
 # cpuset parameters
-echo 0-1 5-6 > /dev/cpuset/background/cpus
-echo 0-1 5-6 > /dev/cpuset/system-background/cpus
+echo 0-2 > /dev/cpuset/background/cpus
+echo 0-2 > /dev/cpuset/system-background/cpus
+echo 0-1 > /dev/cpuset/restricted/cpus
 
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
