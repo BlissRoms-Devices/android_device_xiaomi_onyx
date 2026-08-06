@@ -131,14 +131,14 @@ if [ -d /proc/sys/walt ]; then
 	echo "walt" > /sys/devices/system/cpu/cpufreq/policy5/scaling_governor
 	echo "walt" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
 
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy2/walt/down_rate_limit_us
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy2/walt/up_rate_limit_us
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy5/walt/down_rate_limit_us
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy5/walt/up_rate_limit_us
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us
-	echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us
+	echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
+	echo 500 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
+	echo 15000 > /sys/devices/system/cpu/cpufreq/policy2/walt/down_rate_limit_us
+	echo 500 > /sys/devices/system/cpu/cpufreq/policy2/walt/up_rate_limit_us
+	echo 10000 > /sys/devices/system/cpu/cpufreq/policy5/walt/down_rate_limit_us
+	echo 1000 > /sys/devices/system/cpu/cpufreq/policy5/walt/up_rate_limit_us
+	echo 5000 > /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us
+	echo 2000 > /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us
 
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy2/walt/pl
