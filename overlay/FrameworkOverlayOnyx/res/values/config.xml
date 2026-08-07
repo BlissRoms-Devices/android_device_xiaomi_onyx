@@ -794,7 +794,15 @@
 
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string name="config_mainBuiltInDisplayCutout" translatable="false">M 0,0 H -33 V 132 H 33 V 0 H 0 Z</string>
+    <string name="config_mainBuiltInDisplayCutout" translatable="false">M 40 85 a 40,40 0 0 0 -80,0 a 40,40 0 0 0 80,0</string>
+
+    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
+         one single bounding rect per device edge to the app via
+         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
+         appearance of the cutout as much as possible, and may be smaller than
+         config_mainBuiltInDisplayCutout
+         -->
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation" translatable="false">M 41,0 V 126 H -41 V 0 Z</string>
 
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
@@ -838,7 +846,7 @@
 
          Note: If the display supports multiple resolutions, please define the path config based on
          the highest resolution so that it can be scaled correctly in each resolution. -->
-    <string name="config_mainDisplayShape" translatable="false">M20 0h1040s20 0 20 20v2360s0 20 -20 20h-1040s-20 0 -20 -20v-2360s0 -20 20 -20</string>
+    <string name="config_mainDisplayShape" translatable="false">M 156,0 H 1124 A 156,156 0 0 1 1280,156 V 2616 A 156,156 0 0 1 1124,2772 H 156 A 156,156 0 0 1 0,2616 V 156 A 156,156 0 0 1 156,0 Z</string>
 
     <!-- Whether to enable fp unlock when screen turns off on udfps devices -->
     <bool name="config_screen_off_udfps_enabled">true</bool>
