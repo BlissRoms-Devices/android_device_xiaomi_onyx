@@ -112,7 +112,6 @@ on early-boot
     verity_update_state
 
 on boot
-    write /dev/cpuset/audio-app/cpus 0-1
     chown system /sys/devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable
     chmod 0660 /sys/devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable
     chown system /sys/devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_enable
