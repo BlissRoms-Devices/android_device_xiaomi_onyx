@@ -298,6 +298,5 @@ service vendor.audio-hal-aidl /vendor/bin/hw/audiohalservice.qti
     rlimit rtprio 10 10
     ioprio rt 4
     task_profiles ProcessCapacityHigh HighPerformance
-    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     socket audio_us_socket_0 seqpacket 0666 system system
     onrestart restart audioserver
