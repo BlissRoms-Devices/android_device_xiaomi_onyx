@@ -34,7 +34,7 @@ on fs
 
 on post-fs
     setprop dalvik.vm.heapstartsize 24m
-    setprop dalvik.vm.heapgrowthlimit 384m
+    setprop dalvik.vm.heapgrowthlimit 512m
     setprop dalvik.vm.heapsize 768m
     setprop dalvik.vm.heaptargetutilization 0.75
     setprop dalvik.vm.heapminfree 16m
