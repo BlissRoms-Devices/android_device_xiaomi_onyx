@@ -16,6 +16,7 @@
 #include <thread>
 
 #include <display/drm/mi_disp.h>
+#include <touch/xiaomi_touch.h>
 
 #include "UdfpsHandler.h"
 
@@ -28,6 +29,7 @@
 #define PARAM_FOD_RELEASED 0
 
 #define DISP_FEATURE_PATH "/dev/mi_display/disp_feature"
+#define TOUCH_DEV_PATH "/dev/xiaomi-touch"
 
 using ::aidl::android::hardware::biometrics::fingerprint::AcquiredInfo;
 
@@ -69,13 +71,24 @@ struct disp_base displayBasePrimary = {
         .disp_id = MI_DISP_PRIMARY,
 };
 
+common_data_t touchDataPrimary = {
+        .touch_id = MI_DISP_PRIMARY,
+        .cmd = SET_CUR_VALUE,
+        .mode = 0,
+        .data_len = 1,
+        .data_buf = {},
+};
+
 }  // anonymous namespace
 
 class XiaomiOnyxUdfpsHandler : public UdfpsHandler {
   public:
     void init(fingerprint_device_t* device) {
         mDevice = device;
+        touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
         disp_fd_ = android::base::unique_fd(open(DISP_FEATURE_PATH, O_RDWR));
+
+        ioctl(touch_fd_.get(), TOUCH_IOC_SELECT_TOUCH_ID, MI_DISP_PRIMARY);
 
         // Thread to listen for fod ui changes
         std::thread([this]() {
@@ -134,6 +147,11 @@ class XiaomiOnyxUdfpsHandler : public UdfpsHandler {
         LOG(INFO) << __func__;
         mDevice->extCmd(mDevice, COMMAND_FOD_PRESS_STATUS, PARAM_FOD_PRESSED);
 
+        common_data_t data = touchDataPrimary;
+        data.mode = THP_FOD_DOWNUP_CTL;
+        data.data_buf[0] = 1;
+        ioctl(touch_fd_.get(), TOUCH_IOC_COMMON_DATA, &data);
+
         // Request HBM
         struct disp_local_hbm_req displayLhbmRequest = {
                 .base = displayBasePrimary,
@@ -145,6 +163,11 @@ class XiaomiOnyxUdfpsHandler : public UdfpsHandler {
     void onFingerUp() {
         LOG(INFO) << __func__;
         mDevice->extCmd(mDevice, COMMAND_FOD_PRESS_STATUS, PARAM_FOD_RELEASED);
+
+        common_data_t data = touchDataPrimary;
+        data.mode = THP_FOD_DOWNUP_CTL;
+        data.data_buf[0] = 0;
+        ioctl(touch_fd_.get(), TOUCH_IOC_COMMON_DATA, &data);
 
         // Disable HBM
         struct disp_local_hbm_req displayLhbmRequest = {
@@ -191,6 +214,7 @@ class XiaomiOnyxUdfpsHandler : public UdfpsHandler {
 
   private:
     fingerprint_device_t* mDevice;
+    android::base::unique_fd touch_fd_;
     android::base::unique_fd disp_fd_;
     bool mAuthSuccess = false;
 };
