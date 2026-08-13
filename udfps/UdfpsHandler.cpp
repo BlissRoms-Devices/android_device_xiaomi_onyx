@@ -199,6 +199,7 @@ class XiaomiOnyxUdfpsHandler : public UdfpsHandler {
 
     void cancel() {
         LOG(INFO) << __func__;
+        onFingerUp();
     }
 
     void onAuthenticationSucceeded() {
