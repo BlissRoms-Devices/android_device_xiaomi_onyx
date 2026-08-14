@@ -71,10 +71,10 @@ odm/etc/audio/misoundsa_spk_config.bin
 odm/etc/init/init.awinic.rc
 odm/etc/init/init.cirrus.rc
 odm/lib64/libaudioroute_ext.so
-odm/lib64/libawcal.so;DISABLE_CHECKELF
-odm/lib64/libcrussp.so;DISABLE_CHECKELF
-odm/lib64/libsiaalgocal.so;DISABLE_CHECKELF
-odm/lib64/libtfacal.so;DISABLE_CHECKELF
+odm/lib64/libawcal.so
+odm/lib64/libcrussp.so
+odm/lib64/libsiaalgocal.so
+odm/lib64/libtfacal.so
 odm/lib64/libwindns.so
 odm/lib64/vendor.xiaomi.hardware.mediaeventgatherservice-V1-ndk.so
 vendor/etc/audio_cloud_control_white_list.xml
@@ -92,12 +92,12 @@ vendor/lib64/libVoiceSdk.so
 vendor/lib64/lib_bt_lhdc.so
 vendor/lib64/lib_bt_mihc.so
 vendor/lib64/libadm.so
-vendor/lib64/libar-acdb.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-gpr.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-gsl.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-pal.so;DISABLE_CHECKELF
-vendor/lib64/libarmemlog.so;DISABLE_CHECKELF
-vendor/lib64/libats.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libar-acdb.so
+vendor/lib64/libar-gpr.so
+vendor/lib64/libar-gsl.so
+vendor/lib64/libar-pal.so
+vendor/lib64/libarmemlog.so
+vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudiocloudctrl.so
 vendor/lib64/libaudioplatformconverter.qti.so;DISABLE_DEPS
@@ -110,9 +110,9 @@ vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/liblistensoundmodelaidl.so
-vendor/lib64/liblx-osal.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/liblx-ar_util.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libmcs.so;DISABLE_CHECKELF
+vendor/lib64/liblx-ar_util.so
+vendor/lib64/liblx-osal.so
+vendor/lib64/libmcs.so
 vendor/lib64/libmidatabase.so
 vendor/lib64/libmikaraoke.so
 vendor/lib64/libmis6.so
@@ -156,9 +156,9 @@ odm/firmware/aw882xx_acf.bin
 odm/firmware/sipa.bin
 
 # Audio graph manager
-vendor/lib64/libagm.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libagmclient.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libagmipcservice.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libagm.so
+vendor/lib64/libagmclient.so
+vendor/lib64/libagmipcservice.so
 vendor/lib64/libagmmixer.so
 vendor/lib64/libmisight.so
 
