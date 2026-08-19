@@ -256,6 +256,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/uinput-xiaomi.kl:$(TARGET_COPY_OUT_ODM)/usr/keylayout/uinput-xiaomi.kl
+
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.authsecret-service.nxp \
