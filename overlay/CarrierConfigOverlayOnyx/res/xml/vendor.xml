@@ -12285,6 +12285,13 @@ filtering rules are the same as those in carrier_config*.xml_utils files. This
     <!--尼泊尔 NP NTC-->
     <carrier_config mcc="429" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+    </carrier_config>
+    <!--尼泊尔 NP NCELL-->
+    <carrier_config mcc="429" mnc="02">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
     </carrier_config>
     <!--印度 IN Airtel-->
