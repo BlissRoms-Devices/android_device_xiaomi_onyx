@@ -12846,6 +12846,8 @@ filtering rules are the same as those in carrier_config*.xml_utils files. This
     <!--孟加拉 Bangladesh Grameenphone-->
     <carrier_config mcc="470" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
     </carrier_config>
     <!--北美-->
     <!--美国 AT&T-->
@@ -13533,6 +13535,7 @@ filtering rules are the same as those in carrier_config*.xml_utils files. This
     </carrier_config>
     <carrier_config mcc="470" mnc="3">
         <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="457" mnc="7">
