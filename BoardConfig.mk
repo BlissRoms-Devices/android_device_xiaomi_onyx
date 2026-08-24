@@ -94,6 +94,7 @@ TARGET_KERNEL_CONFIG := \
     vendor/onyx_perf.config \
 
 BOARD_KERNEL_CMDLINE := \
+    kasan=off \
     sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
     swinfo.fingerprint=$(LINEAGE_VERSION) \
     mtdoops.fingerprint=$(LINEAGE_VERSION) \
