@@ -34,9 +34,6 @@ bluetooth.profile.vcp.controller.enabled=false
 # Disable MTE Async for system server
 persist.arm64.memtag.system_server=off
 
-# Phantom process monitoring
-persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
-
 # RKPD
 remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
