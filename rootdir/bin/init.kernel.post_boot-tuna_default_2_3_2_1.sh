@@ -115,6 +115,13 @@ if [ -d /proc/sys/walt ]; then
 	# binder activity tasks
 	echo 325 > /proc/sys/walt/walt_low_latency_task_threshold
 
+	# configure maximum frequency of large and medium cluster for
+	# different smart freq ipc reasons
+	echo 1094400 1401600 1785600 2000000 2147483647 > /proc/sys/walt/cluster0/smart_freq/ipc_freq_levels
+	echo 1612800 2016000 2438400 2800000 2147483647 > /proc/sys/walt/cluster1/smart_freq/ipc_freq_levels
+	echo 1728000 2208000 2611200 3014400 2147483647 > /proc/sys/walt/cluster2/smart_freq/ipc_freq_levels
+	echo 1804800 2304000 2803200 3210000 2147483647 > /proc/sys/walt/cluster3/smart_freq/ipc_freq_levels
+
 	# configure maximum frequency of silver cluster when load is not detected and ensure that
 	# other clusters' fmax remains uncapped by setting the frequency to S32_MAX
 
