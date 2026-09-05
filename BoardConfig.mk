@@ -100,6 +100,8 @@ BOARD_KERNEL_CMDLINE := \
     mtdoops.fingerprint=$(LINEAGE_VERSION) \
     bootmonitor.fingerprint=$(LINEAGE_VERSION)
 
+BOARD_KERNEL_CMDLINE += rcupdate.rcu_expedited=1 rcu_nocbs=all rcutree.enable_rcu_lazy
+
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
