@@ -141,7 +141,7 @@ function configure_memory_parameters() {
 	# Call configure_min_free_kbytes after
 	configure_min_free_kbytes
 
-	echo 100 > /proc/sys/vm/swappiness
+	echo 60 > /proc/sys/vm/swappiness
 
 	# Disable periodic kcompactd wakeups. We do not use THP, so having many
 	# huge pages is not as necessary.
