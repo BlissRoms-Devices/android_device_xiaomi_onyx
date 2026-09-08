@@ -91,7 +91,7 @@ vendor.gatekeeper.is_security_level_spu=0
 # Graphics
 debug.graphics.game_default_frame_rate.disabled=1
 debug.mdpcomp.logs=0
-debug.sf.auto_latch_unsignaled=0
+debug.sf.auto_latch_unsignaled=1
 debug.sf.disable_client_composition_cache=0
 debug.sf.early.app.duration=16600000
 debug.sf.early.sf.duration=16600000
@@ -102,6 +102,7 @@ debug.sf.enable_egl_image_tracker=0
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_transaction_tracing=false
 debug.sf.frame_rate_multiple_threshold=120
+debug.sf.latch_unsignaled=0
 debug.sf.late.app.duration=16600000
 debug.sf.late.sf.duration=10500000
 debug.sf.predict_hwc_composition_strategy=0
