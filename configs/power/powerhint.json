@@ -74,6 +74,86 @@
             "DefaultIndex": 0,
             "ResetOnInit": true
         },
+    	{
+      	    "Name": "sysdevicessystemcpucpufreqpolicy0waltupratelimitus",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us",
+            "Values": [
+        	"2000",
+        	"500"
+      	    ],
+            "DefaultIndex": 0,
+      	    "ResetOnInit": true
+    	},
+    	{
+      	    "Name": "sysdevicessystemcpucpufreqpolicy0waltdownratelimitus",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us",
+      	    "Values": [
+        	"2000",
+        	"20000"
+      	    ],
+            "DefaultIndex": 0,
+      	    "ResetOnInit": true
+    	},
+    	{
+      	    "Name": "sysdevicessystemcpucpufreqpolicy2waltupratelimitus",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy2/walt/up_rate_limit_us",
+            "Values": [
+        	"2000",
+        	"500"
+      	    ],
+            "DefaultIndex": 0,
+      	    "ResetOnInit": true
+    	},
+    	{
+      	    "Name": "sysdevicessystemcpucpufreqpolicy2waltdownratelimitus",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy2/walt/down_rate_limit_us",
+      	    "Values": [
+        	"2000",
+        	"15000"
+      	    ],
+            "DefaultIndex": 0,
+      	    "ResetOnInit": true
+    	},
+    	{
+      	    "Name": "sysdevicessystemcpucpufreqpolicy5waltupratelimitus",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy5/walt/up_rate_limit_us",
+            "Values": [
+        	"2000",
+        	"1000"
+      	    ],
+            "DefaultIndex": 0,
+      	    "ResetOnInit": true
+    	},
+    	{
+      	    "Name": "sysdevicessystemcpucpufreqpolicy5waltdownratelimitus",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy5/walt/down_rate_limit_us",
+      	    "Values": [
+        	"2000",
+        	"10000"
+      	    ],
+            "DefaultIndex": 0,
+      	    "ResetOnInit": true
+    	},
+    	{
+      	    "Name": "sysdevicessystemcpucpufreqpolicy7waltupratelimitus",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us",
+            "Values": [
+        	"4000",
+        	"2000"
+      	    ],
+            "DefaultIndex": 0,
+      	    "ResetOnInit": true
+    	},
+    	{
+      	    "Name": "sysdevicessystemcpucpufreqpolicy7waltdownratelimitus",
+            "Path": "/sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us",
+      	    "Values": [
+        	"2000",
+        	"5000"
+      	    ],
+            "DefaultIndex": 0,
+      	    "ResetOnInit": true
+    	},
         {
             "Name": "sysDevicesSystemCpuCpu0CoreCtlEnable",
             "Path": "/sys/devices/system/cpu/cpu0/core_ctl/enable",
@@ -444,6 +524,54 @@
             "Node": "procSysWaltSchedBusyHystNs",
             "Value": "39",
             "Duration": 0
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "sysdevicessystemcpucpufreqpolicy0waltupratelimitus",
+            "Duration": 0,
+            "Value": "500"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "sysdevicessystemcpucpufreqpolicy0waltdownratelimitus",
+            "Duration": 0,
+            "Value": "20000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "sysdevicessystemcpucpufreqpolicy2waltupratelimitus",
+            "Duration": 0,
+            "Value": "500"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "sysdevicessystemcpucpufreqpolicy2waltdownratelimitus",
+            "Duration": 0,
+            "Value": "15000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "sysdevicessystemcpucpufreqpolicy5waltupratelimitus",
+            "Duration": 0,
+            "Value": "1000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "sysdevicessystemcpucpufreqpolicy5waltdownratelimitus",
+            "Duration": 0,
+            "Value": "10000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "sysdevicessystemcpucpufreqpolicy7waltupratelimitus",
+            "Duration": 0,
+            "Value": "2000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "sysdevicessystemcpucpufreqpolicy7waltdownratelimitus",
+            "Duration": 0,
+            "Value": "5000"
         },
         {
             "PowerHint": "INTERACTION",
