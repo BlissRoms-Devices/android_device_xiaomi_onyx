@@ -9,6 +9,13 @@ runtime_resource_overlay {
 }
 
 runtime_resource_overlay {
+    name: "FrameworkOverlayOnyxCN",
+    manifest: "AndroidManifest-CN.xml",
+    resource_dirs: ["res-CN"],
+    vendor: true,
+}
+
+runtime_resource_overlay {
     name: "FrameworkOverlayOnyxGL",
     manifest: "AndroidManifest-GL.xml",
     resource_dirs: ["res-GL"],
