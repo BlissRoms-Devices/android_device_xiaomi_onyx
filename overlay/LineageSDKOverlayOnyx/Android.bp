@@ -7,3 +7,10 @@ runtime_resource_overlay {
     name: "LineageSDKOverlayOnyx",
     system_ext_specific: true,
 }
+
+runtime_resource_overlay {
+    name: "LineageSDKOverlayOnyxCN",
+    manifest: "AndroidManifest-CN.xml",
+    resource_dirs: ["res-CN"],
+    system_ext_specific: true,
+}
