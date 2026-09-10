@@ -16,6 +16,9 @@ genfscon sysfs /devices/virtual/touch/touch_dev/fod_press_status u:object_r:sysf
 
 # Info 
 genfscon sysfs /kernel/hardware_info_to_dump/hardw_info u:object_r:vendor_sysfs_hardwareinfo:s0
+# LED
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a98000.i2c/i2c-6/6-0030/leds/aw21024_led u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/9c0000.qcom,qupv3_i2c_geni_se/98c000.i2c/i2c-1/1-0030/leds/aw21024_led u:object_r:sysfs_leds:s0
 
 # Memory
 genfscon proc "/mv" u:object_r:procfs_memory:s0
