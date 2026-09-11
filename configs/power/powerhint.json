@@ -370,9 +370,41 @@
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
+        },
+    	{
+            "Name": "UclampTAMin",
+            "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
+      	    "Values": [
+        	"0",
+        	"40"
+      	    ],
+      	    "DefaultIndex": 0,
+            "ResetOnInit": true
+    	},
+        {
+      	    "Name": "UclampFGMin",
+            "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
+            "Values": [
+                "0",
+                "30"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
         }
     ],
     "Actions": [
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "UclampTAMin",
+            "Duration": 0,
+            "Value": "40"
+        },
+        {
+             "PowerHint": "EXPENSIVE_RENDERING",
+             "Node": "UclampFGMin",
+             "Duration": 0,
+             "Value": "30"
+        },
         {
             "PowerHint": "INTERACTION",
             "Node": "sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveHighFreq",
