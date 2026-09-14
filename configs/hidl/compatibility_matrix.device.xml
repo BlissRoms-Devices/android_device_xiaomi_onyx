@@ -3,6 +3,7 @@
         <name>android.hardware.media.c2</name>
         <interface>
             <name>IComponentStore</name>
+            <instance>default</instance>
             <instance>xiaomi</instance>
         </interface>
     </hal>
