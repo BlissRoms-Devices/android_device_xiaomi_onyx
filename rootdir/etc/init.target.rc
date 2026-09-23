@@ -84,20 +84,6 @@ on fs
     restorecon_recursive /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
 
-on post-fs
-    #Execute virtualization manager
-    on property:ro.vendor.vm.ssr.enable=
-        enable vendor.qvirtservice_rs
-        start  vendor.qvirtservice_rs
-    on property:ro.vendor.vm.ssr.enable=false
-        enable vendor.qvirtservice_rs
-        start  vendor.qvirtservice_rs
-    on property:ro.vendor.vm.ssr.enable=true
-        enable vendor.qvirtservice_rs
-        start  vendor.qvirtservice_rs
-        enable vendor.qvirtvendorservice
-        start  vendor.qvirtvendorservice
-
 on late-fs
     #exec_start wait_for_keymaster
     mount_all --late
