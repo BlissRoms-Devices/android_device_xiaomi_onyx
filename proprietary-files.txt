@@ -2553,7 +2553,6 @@ vendor/etc/apdr.conf
 vendor/etc/gps.conf
 vendor/etc/gps_diag.cfg
 vendor/etc/init/loc-launcher.rc
-vendor/etc/init/vendor.qsap.location.rc
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
