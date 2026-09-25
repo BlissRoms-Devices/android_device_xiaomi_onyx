@@ -6,6 +6,8 @@ app_domain(parts_app)
 allow parts_app activity_service:service_manager find;
 allow parts_app activity_task_service:service_manager find;
 allow parts_app audio_service:service_manager find;
+allow parts_app content_capture_service:service_manager find;
+allow parts_app gpu_service:service_manager find;
 allow parts_app netstats_service:service_manager find;
 allow parts_app vendor_hal_displayfeature_xiaomi_service:service_manager find;
 binder_call(parts_app, vendor_hal_displayfeature_xiaomi_default)
