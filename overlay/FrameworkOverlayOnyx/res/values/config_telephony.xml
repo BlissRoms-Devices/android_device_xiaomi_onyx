@@ -51,4 +51,7 @@
          re-established on the target transport when condition is allowed for bringing up a
          new network. -->
     <bool name="config_enhanced_iwlan_handover_check">false</bool>
+
+    <!-- Workaround for transient data RAT UNKNOWN when voice RAT is NR -->
+    <bool name="config_onyx_nr_unknown_workaround">true</bool>
 </resources>
