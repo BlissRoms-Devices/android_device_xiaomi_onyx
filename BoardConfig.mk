@@ -157,7 +157,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/touch-drivers \
     qcom/opensource/video-driver \
     qcom/opensource/wlan/platform \
-    qcom/opensource/wlan/qcacld-3.0 \
+    qcom/opensource/wlan/qcacld-3.0/.wcn7750 \
     qcom/opensource/bt-kernel \
     nxp/opensource/driver
 
