@@ -58,4 +58,7 @@
 
     <!-- Bliss Maintainer -->
     <string name="bliss_maintainer">ROMGHARTI|K4LCHAKRA</string>
+
+    <!-- CPU name -->
+    <string name="config_cpu_name" translatable="false">Qualcomm Snapdragon 8s Gen 4</string>
 </resources>
