@@ -158,3 +158,8 @@ on property:sys.shutdown.requested=*
 on early-boot && property:persist.vendor.pcie.boot_option=*
     write /sys/bus/platform/devices/1c00000.qcom,pcie/debug/boot_option ${persist.vendor.pcie.boot_option}
     write /sys/bus/platform/devices/1c08000.qcom,pcie/debug/boot_option ${persist.vendor.pcie.boot_option}
+
+# Force Qualcomm hardware media parser after vendor init scripts complete
+on property:sys.boot_completed=1
+    setprop vendor.mm.target.enable.qcom_parser 16777215
+    setprop vendor.mm.enable.qcom_parser 16777215
