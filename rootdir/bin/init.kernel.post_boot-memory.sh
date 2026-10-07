@@ -122,32 +122,13 @@ function configure_thp()
 
 function configure_min_free_kbytes()
 {
-	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-	MemTotal=${MemTotalStr:16:8}
-	let RamSizeGB="( $MemTotal / 1048576 ) + 1"
-    # Set the min_free_kbytes to standard kernel value
-	if [ $RamSizeGB -ge 12 ]; then
-		# 12GB, 16GB
-		MinFreeKbytes=11584
-	elif [ $RamSizeGB -ge 8 ]; then
-		# 8GB
-		MinFreeKbytes=11584
-		WatermarkScale=65
-		echo $WatermarkScale > /proc/sys/vm/watermark_scale_factor
-
-	elif [ $RamSizeGB -ge 4 ]; then
-		MinFreeKbytes=8192
-	elif [ $RamSizeGB -ge 2 ]; then
-		MinFreeKbytes=5792
-	else
-		MinFreeKbytes=4096
-	fi
+        # 12GB RAM tuning for POCO F7
+        MinFreeKbytes=32768
 
 	# We store min_free_kbytes into a vendor property so that the PASR
 	# HAL can read and set the value for it.
 	echo $MinFreeKbytes > /proc/sys/vm/min_free_kbytes
 	setprop vendor.memory.min_free_kbytes $MinFreeKbytes
-
 }
 
 function configure_memory_parameters() {
