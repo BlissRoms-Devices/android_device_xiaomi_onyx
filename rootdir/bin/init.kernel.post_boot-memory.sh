@@ -125,8 +125,8 @@ function configure_min_free_kbytes()
         # 12GB RAM tuning for POCO F7
         MinFreeKbytes=32768
 
-	# We store min_free_kbytes into a vendor property so that the PASR
-	# HAL can read and set the value for it.
+	# Store min_free_kbytes into a vendor property so that it can be
+	# reapplied on demand via init.qti.kernel.rc.
 	echo $MinFreeKbytes > /proc/sys/vm/min_free_kbytes
 	setprop vendor.memory.min_free_kbytes $MinFreeKbytes
 }
