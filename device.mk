@@ -268,7 +268,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.camera.wmfix.sh \
     init.class_main.sh \
-    init.kernel.init_boot-memory.sh \
     init.kernel.post_boot-memory.sh \
     init.kernel.post_boot-tuna.sh \
     init.kernel.post_boot-tuna_default_2_3_2_1.sh \
