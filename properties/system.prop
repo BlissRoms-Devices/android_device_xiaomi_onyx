@@ -15,6 +15,11 @@ persist.backup.ntpServer=0.pool.ntp.org
 debug.hwui.skia_tracing_enabled=false
 debug.hwui.skia_use_perfetto_track_events=false
 
+# LMKD
+ro.lmk.kill_heaviest_task=true
+ro.lmk.relaxed_available_memory=true
+ro.lmk.swap_compression_ratio=2
+
 # Media
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.mediaserver.64b.enable=true
