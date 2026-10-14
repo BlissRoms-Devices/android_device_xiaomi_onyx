@@ -1,1 +1,2 @@
+allow untrusted_app_34 overlay_service:service_manager { find };
 allow untrusted_app_34 window_service:service_manager { find };
