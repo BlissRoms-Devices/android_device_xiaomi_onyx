@@ -559,4 +559,4 @@ $(call inherit-product-if-exists, packages/apps/NotGameTurbo/notgameturbo.mk)
 $(call inherit-product, vendor/xiaomi/onyx/onyx-vendor.mk)
 
 # Vendor MiuiCamera
-$(call inherit-product-if-exists, device/xiaomi/onyx-miuicamera/device.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/onyx-leicacamera/onyx-leicacamera-vendor.mk)
