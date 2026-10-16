@@ -203,6 +203,14 @@ on property:dev.bootcomplete=1
     chown system system /sys/class/xm_power/charger/smart_charge/smart_night
     chmod 0660 /sys/class/xm_power/charger/smart_charge/smart_night
 
+# ABL only enters off-mode charging when power_off_mode in the charger partition is 1,
+# and the MCA driver resets it on every boot. Set it on shutdown like MiuiBatteryServiceImpl.
+on property:sys.shutdown.requested=0userrequested
+    write /sys/class/xm_power/charger/charger_partition/charger_partition_poweroffmode 1
+
+on property:sys.shutdown.requested=0thermal,battery
+    write /sys/class/xm_power/charger/charger_partition/charger_partition_poweroffmode 1
+
 # Enable WLAN SSR recovery
 on property:persist.vendor.ssr.restart_level=ALL_ENABLE
     write /sys/kernel/cnss/recovery 3
