@@ -1,0 +1,7 @@
+# Boot pass that makes the MiSyS-written watermark templates readable by the
+# camera provider again (rootdir/bin/init.camera.wmfix.sh). Runs as uid camera
+# in the vendor_shell domain used by the other /vendor/bin/init.*.sh scripts,
+# so the owner performs every chmod and no capability is required.
+allow vendor_shell vendor_data_file:dir search;
+allow vendor_shell vendor_camera_data_file:dir create_dir_perms;
+allow vendor_shell vendor_camera_data_file:file create_file_perms;

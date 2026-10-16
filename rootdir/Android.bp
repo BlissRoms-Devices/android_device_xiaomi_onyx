@@ -1,4 +1,10 @@
 sh_binary {
+    name: "init.camera.wmfix.sh",
+    src: "bin/init.camera.wmfix.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.class_main.sh",
     src: "bin/init.class_main.sh",
     vendor: true,

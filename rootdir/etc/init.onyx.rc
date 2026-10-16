@@ -229,6 +229,17 @@ on property:sys.boot_completed=1
     # Optimize vfs cache pressure
     write /proc/sys/vm/vfs_cache_pressure 50
 
+    # MiSyS wrote the watermark templates 0600/2700 (init umask 077, uid
+    # camera), which cameraserver cannot read -> watermark dropped.
+    start vendor.camera-wmfix
+
+service vendor.camera-wmfix /vendor/bin/sh /vendor/bin/init.camera.wmfix.sh
+    class late_start
+    user camera
+    group camera
+    disabled
+    oneshot
+
 service cnss-daemon /system/vendor/bin/cnss-daemon -n -l --max_file_count 3 --max_file_size 20
 
 service loc_launcher /system/vendor/bin/loc_launcher
