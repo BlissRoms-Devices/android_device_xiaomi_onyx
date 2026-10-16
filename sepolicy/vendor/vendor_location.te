@@ -1,0 +1,6 @@
+type vendor_lowi_server, domain;
+type vendor_xtra_daemon, domain;
+
+# Allow loc_launcher to transition to them
+domain_auto_trans(vendor_location, vendor_location_lowi_server_exec, vendor_lowi_server)
+domain_auto_trans(vendor_location, vendor_location_xtra_daemon_exec, vendor_xtra_daemon)
