@@ -237,6 +237,9 @@ on property:sys.boot_completed=1
     # Optimize vfs cache pressure
     write /proc/sys/vm/vfs_cache_pressure 50
 
+    # Adjust watermark level
+    write /proc/sys/vm/watermark_scale_factor 200
+
     # MiSyS wrote the watermark templates 0600/2700 (init umask 077, uid
     # camera), which cameraserver cannot read -> watermark dropped.
     start vendor.camera-wmfix
