@@ -17,3 +17,6 @@ allow vendor_init minidump_data_file:file create_file_perms;
 allow vendor_init proc_hung_task:file rw_file_perms;
 allow vendor_init proc_perf:file write;
 allow vendor_init sysfs:lnk_file setattr;
+
+# MM
+allow vendor_init proc_watermark_scale_factor:file w_file_perms;
