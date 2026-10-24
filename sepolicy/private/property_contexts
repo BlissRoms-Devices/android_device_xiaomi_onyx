@@ -1,3 +1,6 @@
+# Bluetooth
+persist.bluetooth.a2dp_aac_abr.enable    u:object_r:exported_bluetooth_prop:s0
+
 # Hardware
 ro.hardware.chipname           u:object_r:exported_default_prop:s0
 
