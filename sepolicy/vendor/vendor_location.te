@@ -15,3 +15,9 @@ allow vendor_xtra_daemon self:qipcrtr_socket { create bind connect read write ge
 # Allow xtra-daemon to communicate over vendor binder
 binder_use(vendor_xtra_daemon)
 allow vendor_xtra_daemon vndbinder_device:chr_file { read write open getattr map ioctl };
+
+# Allow lowi-server to create netlink route sockets
+allow vendor_lowi_server self:netlink_route_socket create_socket_perms_no_ioctl;
+
+# Allow lowi-server to search and access location sockets directory
+allow vendor_lowi_server vendor_location_socket:dir { search getattr open read };
