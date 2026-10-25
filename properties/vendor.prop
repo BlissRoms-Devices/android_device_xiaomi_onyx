@@ -85,6 +85,7 @@ vendor.gatekeeper.is_security_level_spu=0
 # Graphics
 debug.graphics.game_default_frame_rate.disabled=1
 debug.mdpcomp.logs=0
+debug.renderengine.backend=skiavkthreaded
 debug.sf.auto_latch_unsignaled=1
 debug.sf.disable_client_composition_cache=0
 debug.sf.early.app.duration.144=10333333
