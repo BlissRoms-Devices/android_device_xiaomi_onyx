@@ -19,7 +19,6 @@ allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_server:fd *;
 allow hal_touchfeature_xiaomi_client hal_touchfeature_xiaomi_service:service_manager find;
 allow hal_touchfeature_xiaomi_default fwk_sensor_hwservice:hwservice_manager find;
 allow hal_touchfeature_xiaomi_default fwk_sensor_service:service_manager find;
-allow hal_touchfeature_xiaomi_default hal_touchfeature_xiaomi_service:service_manager find;
 allow hal_touchfeature_xiaomi_default input_device:chr_file rw_file_perms;
 allow hal_touchfeature_xiaomi_default input_device:dir r_dir_perms;
 allow hal_touchfeature_xiaomi_default mnt_vendor_file:dir { w_dir_perms getattr read rmdir };
@@ -43,4 +42,4 @@ allow hal_touchfeature_xiaomi_default vendor_data_touchreport_file:dir { add_nam
 allow hal_touchfeature_xiaomi_default vendor_data_touchreport_file:file { create getattr open read rename setattr unlink write };
 allow hal_touchfeature_xiaomi_default vendor_touchfeature_prop:file { getattr open read };
 allow hal_touchfeature_xiaomi_server hal_touchfeature_xiaomi_client:binder transfer;
-allow hal_touchfeature_xiaomi_server hal_touchfeature_xiaomi_service:service_manager { add find };
+add_service(hal_touchfeature_xiaomi_server, hal_touchfeature_xiaomi_service)
