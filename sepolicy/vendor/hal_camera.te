@@ -18,10 +18,7 @@ allow hal_camera_client hal_camera_aon_service:service_manager find;
 allow hal_camera_client hal_dynamic_camera_service:service_manager find;
 allow hal_camera_client vendor_intentaware_service:service_manager find;
 allow hal_camera_client hal_quickcamera_service:service_manager find;
-allow hal_camera_default camera_persist_file:dir search;
 allow hal_camera_default camlog_device:chr_file { ioctl open read write };
-allow hal_camera_default hal_dynamic_camera_service:service_manager find;
-allow hal_camera_default vendor_intentaware_service:service_manager { add find };
 allow hal_camera_default proc_pressure_mem:file { getattr open read write };
 allow hal_camera_default self:capability { fowner ipc_lock };
 allow hal_camera_default sys_thermal_flash_state:file { w_file_perms getattr };
@@ -29,10 +26,10 @@ allow hal_camera_default sys_thermal_torch_real_level:file { w_file_perms getatt
 allow hal_camera_default sysfs_csiphy_umd_paras:file { open read write };
 allow hal_camera_default vendor_camera_data_file:sock_file { create getattr open read setattr unlink write };
 allow hal_camera_default vendor_displayfeature_device:chr_file { ioctl open read };
-allow hal_camera_server hal_aidlbgservice_service:service_manager { add find };
-allow hal_camera_server hal_camera_aon_service:service_manager { add find };
-allow hal_camera_server hal_dynamic_camera_service:service_manager { add find };
-allow hal_camera_server vendor_intentaware_service:service_manager { add find };
+add_service(hal_camera_server, hal_aidlbgservice_service)
+add_service(hal_camera_server, hal_camera_aon_service)
+add_service(hal_camera_server, hal_dynamic_camera_service)
+add_service(hal_camera_server, vendor_intentaware_service)
 allow hal_camera_server hal_quickcamera_service:service_manager { add find };
 allow hal_camera_server vendor_sysfs_xm_power:dir r_dir_perms;
 allow hal_camera_server vendor_sysfs_xm_power:file rw_file_perms;
