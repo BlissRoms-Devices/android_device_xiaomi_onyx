@@ -85,7 +85,7 @@ if [ -d /proc/sys/walt ]; then
 	echo 10 10 10 10 10 10 10 95 > /proc/sys/walt/sched_coloc_busy_hyst_cpu_busy_pct
 	echo 8500000 8500000 8500000 8500000 8500000 8500000 8500000 2000000 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
 	echo 255 > /proc/sys/walt/sched_util_busy_hysteresis_enable_cpus
-	echo 1 1 1 1 1 1 1 15 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
+	echo 30 30 30 30 30 30 30 15 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
 	echo 40 > /proc/sys/walt/sched_cluster_util_thres_pct
 	echo 30 > /proc/sys/walt/sched_idle_enough
 	echo 10 > /proc/sys/walt/sched_ed_boost
