@@ -285,16 +285,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "sysDevicesSystemCpuCpu2CpufreqWaltHispeedFreq",
-            "Path": "/sys/devices/system/cpu/cpu2/cpufreq/walt/hispeed_freq",
-            "Values": [
-                "1190400",
-                "748"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
             "Name": "sysDevicesSystemCpuCpu0CoreCtlMinPartialCpus",
             "Path": "/sys/devices/system/cpu/cpu0/core_ctl/min_partial_cpus",
             "Values": [
@@ -734,12 +724,6 @@
         },
         {
             "PowerHint": "CAMERA_STREAMING_LOW",
-            "Node": "sysDevicesSystemCpuCpu2CpufreqWaltHispeedFreq",
-            "Value": "748",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_LOW",
             "Node": "sysDevicesSystemCpuCpu0CoreCtlMinPartialCpus",
             "Value": "1",
             "Duration": 0
@@ -860,12 +844,6 @@
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "sysDevicesSystemCpuCpu2CpufreqWaltHispeedFreq",
-            "Value": "748",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
             "Node": "sysDevicesSystemCpuCpu0CoreCtlMinPartialCpus",
             "Value": "1",
             "Duration": 0
@@ -964,12 +942,6 @@
             "PowerHint": "CAMERA_STREAMING_HIGH",
             "Node": "procSysWaltSchedIdleEnough",
             "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "sysDevicesSystemCpuCpu2CpufreqWaltHispeedFreq",
-            "Value": "748",
             "Duration": 0
         },
         {
