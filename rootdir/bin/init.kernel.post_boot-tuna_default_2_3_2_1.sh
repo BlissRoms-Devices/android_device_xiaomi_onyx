@@ -64,8 +64,8 @@ if [ -d /proc/sys/walt ]; then
 	echo 0x7C > /sys/devices/system/cpu/cpu7/core_ctl/assist_cpu_mask
 	echo 0x03 > /sys/devices/system/cpu/cpu7/core_ctl/assist_cpu_misfit_mask
 
-	echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
-	echo 0 > /sys/devices/system/cpu/cpu2/core_ctl/enable
+	echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+	echo 1 > /sys/devices/system/cpu/cpu2/core_ctl/enable
 	echo 1 > /sys/devices/system/cpu/cpu5/core_ctl/enable
 	echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/enable
 

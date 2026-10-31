@@ -64,25 +64,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "sysDevicesSystemCpuCpu0CoreCtlEnable",
-            "Path": "/sys/devices/system/cpu/cpu0/core_ctl/enable",
-            "Values": [
-                "0"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "sysDevicesSystemCpuCpu5CoreCtlEnable",
-            "Path": "/sys/devices/system/cpu/cpu5/core_ctl/enable",
-            "Values": [
-                "1",
-                "0"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
             "Name": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccMaxFreq",
             "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/max_freq",
             "Values": [
@@ -323,15 +304,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "sysDevicesSystemCpuCpu2CoreCtlEnable",
-            "Path": "/sys/devices/system/cpu/cpu2/core_ctl/enable",
-            "Values": [
-                "0"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
             "Name": "devCpuDmaLatency",
             "Path": "/dev/cpu_dma_latency",
             "Values": [
@@ -547,18 +519,6 @@
             "PowerHint": "INTERACTION",
             "Node": "procSysWaltSchedBusyHystNs",
             "Value": "39",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "sysDevicesSystemCpuCpu0CoreCtlEnable",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "sysDevicesSystemCpuCpu5CoreCtlEnable",
-            "Value": "0",
             "Duration": 0
         },
         {
@@ -797,24 +757,6 @@
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "sysDevicesSystemCpuCpu0CoreCtlEnable",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "sysDevicesSystemCpuCpu2CoreCtlEnable",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "sysDevicesSystemCpuCpu5CoreCtlEnable",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
             "Node": "procSysWaltSchedIdleEnough",
             "Value": "0",
             "Duration": 0
@@ -895,24 +837,6 @@
             "PowerHint": "CAMERA_STREAMING_HIGH",
             "Node": "procSysWaltSchedDownmigrate",
             "Value": "10 85 85",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "sysDevicesSystemCpuCpu0CoreCtlEnable",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "sysDevicesSystemCpuCpu2CoreCtlEnable",
-            "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "sysDevicesSystemCpuCpu5CoreCtlEnable",
-            "Value": "0",
             "Duration": 0
         },
         {
