@@ -176,8 +176,8 @@ fi
 
 	echo "0:441600 2:480000 5:480000 7:480000" > /data/vendor/perfd/default_scaling_min_freq
 
-# Reset the RT boost, which is 1024 (max) by default.
-echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
+# Clamp default Real-Time uclamp floor to ~10% (103/1024).
+echo 103 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 
 # cpuset parameters
 echo 0-1 5-6 > /dev/cpuset/background/cpus
