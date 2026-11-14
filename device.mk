@@ -386,6 +386,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ApertureOverlayOnyx \
     CarrierConfigOverlayOnyx \
+    DeviceAsWebcam \
     DeviceAsWebcamResTarget \
     SystemUIOverlayOnyx \
     TelephonyOverlayOnyx \
