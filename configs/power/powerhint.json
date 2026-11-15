@@ -86,66 +86,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveHighFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy2/walt/adaptive_high_freq",
-            "Values": [
-                "0",
-                "1632000"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveHighFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy5/walt/adaptive_high_freq",
-            "Values": [
-                "0",
-                "1728000"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveLowFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy2/walt/adaptive_low_freq",
-            "Values": [
-                "0",
-                "1286400"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveLowFreq",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy5/walt/adaptive_low_freq",
-            "Values": [
-                "0",
-                "1516800"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveLevel1",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy2/walt/adaptive_level_1",
-            "Values": [
-                "0",
-                "1056000"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveLevel1",
-            "Path": "/sys/devices/system/cpu/cpufreq/policy5/walt/adaptive_level_1",
-            "Values": [
-                "0",
-                "1190400"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
             "Name": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccSampleMs",
             "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/sample_ms",
             "Values": [
@@ -531,60 +471,6 @@
             "PowerHint": "LAUNCH",
             "Node": "sysKernelMsmPerformanceParametersCpuMaxFreq",
             "Value": "0:2016000 1:2016000 2:3014400 3:3014400 4:3014400 5:2803200 6:2803200",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveHighFreq",
-            "Value": "1632000",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveHighFreq",
-            "Value": "1632000",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveHighFreq",
-            "Value": "1728000",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveLowFreq",
-            "Value": "1401600",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveLowFreq",
-            "Value": "1286400",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveLowFreq",
-            "Value": "1516800",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveLevel1",
-            "Value": "1190400",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveLevel1",
-            "Value": "1056000",
-            "Duration": 2000
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveLevel1",
-            "Value": "1190400",
             "Duration": 2000
         },
         {
