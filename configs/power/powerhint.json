@@ -74,18 +74,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "sysKernelMsmPerformanceParametersCpuMaxFreq",
-            "Path": "/sys/kernel/msm_performance/parameters/cpu_max_freq",
-            "Values": [
-                "0:9999999 1:9999999 2:9999999 3:9999999 4:9999999 5:9999999 6:9999999 7:9999999",
-                "0:1632000 1:1632000 2:1286400 3:1286400 4:1286400 5:2208000 6:2208000 7:1670400",
-                "0:2016000 1:2016000 2:3014400 3:3014400 4:3014400 5:2803200 6:2803200",
-                "2:1056000 3:1056000 4:1056000"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
             "Name": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccSampleMs",
             "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/sample_ms",
             "Values": [
@@ -475,12 +463,6 @@
             "Duration": 0
         },
         {
-            "PowerHint": "LAUNCH",
-            "Node": "sysKernelMsmPerformanceParametersCpuMaxFreq",
-            "Value": "0:2016000 1:2016000 2:3014400 3:3014400 4:3014400 5:2803200 6:2803200",
-            "Duration": 2000
-        },
-        {
             "PowerHint": "CAMERA_STREAMING_LOW",
             "Node": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccSampleMs",
             "Value": "33",
@@ -508,12 +490,6 @@
             "PowerHint": "CAMERA_STREAMING_LOW",
             "Node": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccHystTriggerCount",
             "Value": "0",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_LOW",
-            "Node": "sysKernelMsmPerformanceParametersCpuMaxFreq",
-            "Value": "2:1056000 3:1056000 4:1056000",
             "Duration": 0
         },
         {
@@ -614,12 +590,6 @@
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "sysKernelMsmPerformanceParametersCpuMaxFreq",
-            "Value": "2:1056000 3:1056000 4:1056000",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
             "Node": "sysDevicesSystemCpuCpu2CpufreqWaltPl",
             "Value": "0",
             "Duration": 0
@@ -698,12 +668,6 @@
         },
         {
             "PowerHint": "CAMERA_STREAMING_HIGH",
-            "Node": "sysKernelMsmPerformanceParametersCpuMaxFreq",
-            "Value": "2:1056000 3:1056000 4:1056000",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_HIGH",
             "Node": "sysDevicesSystemCpuCpu2CpufreqWaltPl",
             "Value": "0",
             "Duration": 0
@@ -754,12 +718,6 @@
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "devCpuDmaLatency",
             "Value": "1",
-            "Duration": 1000
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "sysKernelMsmPerformanceParametersCpuMaxFreq",
-            "Value": "0:1632000 1:1632000 2:1286400 3:1286400 4:1286400 5:2208000 6:2208000 7:1670400",
             "Duration": 1000
         },
         {
