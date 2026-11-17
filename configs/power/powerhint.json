@@ -344,6 +344,28 @@
             "DefaultIndex": 0,
             "ResetOnInit": true
         },
+        {
+            "Name": "PowerHALMainState",
+            "Path": "vendor.powerhal.state",
+            "Values": [
+                "SUSTAINED_PERFORMANCE",
+                ""
+            ],
+            "DefaultIndex": 1,
+            "ResetOnInit": true,
+            "Type": "Property"
+        },
+        {
+            "Name": "PowerHALRenderingState",
+            "Path": "vendor.powerhal.rendering",
+            "Values": [
+                "EXPENSIVE_RENDERING",
+                ""
+            ],
+            "DefaultIndex": 1,
+            "ResetOnInit": true,
+            "Type": "Property"
+        },
     	{
             "Name": "UclampTAMin",
             "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
@@ -421,6 +443,12 @@
             "Duration": 0
         },
         {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "PowerHALRenderingState",
+            "Value": "EXPENSIVE_RENDERING",
+            "Duration": 0
+        },
+        {
             "PowerHint": "INTERACTION",
             "Node": "sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveHighFreq",
             "Value": "1785600",
@@ -460,6 +488,12 @@
             "PowerHint": "INTERACTION",
             "Node": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccMaxFreq",
             "Value": "933000",
+            "Duration": 0
+        },
+        {
+            "PowerHint": "SUSTAINED_PERFORMANCE",
+            "Node": "PowerHALMainState",
+            "Value": "SUSTAINED_PERFORMANCE",
             "Duration": 0
         },
         {
