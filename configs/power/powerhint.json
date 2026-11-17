@@ -257,7 +257,8 @@
             "Path": "/sys/kernel/msm_performance/parameters/cpu_min_freq",
             "Values": [
                 "0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0",
-                "0:1632000 1:1632000 2:1286400 3:1286400 4:1286400 5:2208000 6:2208000 7:1670400"
+                "0:1632000 1:1632000 2:1286400 3:1286400 4:1286400 5:2208000 6:2208000 7:1670400",
+                "0:1190400 1:1190400 2:1286400 3:1286400 4:1286400 5:1632000 6:1632000 7:1478400"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -424,6 +425,12 @@
              "Node": "UclampFGMin",
              "Duration": 0,
              "Value": "30"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "sysKernelMsmPerformanceParametersCpuMinFreq",
+            "Value": "0:1190400 1:1190400 2:1286400 3:1286400 4:1286400 5:1632000 6:1632000 7:1478400",
+            "Duration": 0
         },
         {
             "PowerHint": "INTERACTION",
