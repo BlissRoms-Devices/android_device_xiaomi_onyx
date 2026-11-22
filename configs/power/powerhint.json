@@ -491,6 +491,30 @@
             "Duration": 0
         },
         {
+            "PowerHint": "INTERACTION",
+            "Node": "CPULittleClusterMinFreq",
+            "Duration": 0,
+            "Value": "883200"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPUMediumClusterMinFreq",
+            "Duration": 0,
+            "Value": "1190400"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPUMediumTwoClusterMinFreq",
+            "Duration": 0,
+            "Value": "1190400"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPUPrimeClusterMinFreq",
+            "Duration": 0,
+            "Value": "787200"
+        },
+        {
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "PowerHALMainState",
             "Value": "SUSTAINED_PERFORMANCE",
