@@ -123,8 +123,8 @@ if [ -d /proc/sys/walt ]; then
 	echo 0 > /proc/sys/walt/sched_boost
 
 	# configure input boost settings
-	echo 1075200 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
-	echo 40 > /proc/sys/walt/input_boost/input_boost_ms
+	echo 883200 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
+	echo 100 > /proc/sys/walt/input_boost/input_boost_ms
 
 	echo "walt" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 	echo "walt" > /sys/devices/system/cpu/cpufreq/policy2/scaling_governor
