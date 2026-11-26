@@ -515,6 +515,18 @@
             "Duration": 0
         },
         {
+            "PowerHint": "INTERACTION",
+            "Node": "LLCCBWMinFreq",
+            "Value": "600000",
+            "Duration": 0
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "L3MinFreq",
+            "Value": "806400",
+            "Duration": 0
+        },
+        {
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "PowerHALMainState",
             "Value": "SUSTAINED_PERFORMANCE",
