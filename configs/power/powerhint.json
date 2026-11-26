@@ -34,6 +34,17 @@
             "ResetOnInit": true
         },
         {
+            "Name": "procSysWaltSchedBoost",
+            "Path": "/proc/sys/walt/sched_boost",
+            "Values": [
+                "0",
+                "1",
+                "2"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
             "Name": "sysDevicesSystemCpuCpu0CoreCtlMinCpus",
             "Path": "/sys/devices/system/cpu/cpu0/core_ctl/min_cpus",
             "Values": [
@@ -468,6 +479,12 @@
         },
         {
             "PowerHint": "INTERACTION",
+            "Node": "procSysWaltSchedBoost",
+            "Value": "2",
+            "Duration": 0
+        },
+        {
+            "PowerHint": "INTERACTION",
             "Node": "sysDevicesSystemCpuCpu0CoreCtlMinCpus",
             "Value": "3",
             "Duration": 0
@@ -531,6 +548,12 @@
             "Node": "PowerHALMainState",
             "Value": "SUSTAINED_PERFORMANCE",
             "Duration": 0
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "procSysWaltSchedBoost",
+            "Value": "1",
+            "Duration": 2000
         },
         {
             "PowerHint": "CAMERA_STREAMING_LOW",
@@ -787,6 +810,12 @@
         {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "devCpuDmaLatency",
+            "Value": "1",
+            "Duration": 1000
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "procSysWaltSchedBoost",
             "Value": "1",
             "Duration": 1000
         },
