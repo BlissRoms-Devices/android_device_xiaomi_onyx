@@ -78,8 +78,8 @@
             "Name": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccMaxFreq",
             "Path": "/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/max_freq",
             "Values": [
-                "1211200",
-                "933000"
+                "933000",
+                "1211200"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -504,7 +504,7 @@
         {
             "PowerHint": "INTERACTION",
             "Node": "sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccMaxFreq",
-            "Value": "933000",
+            "Value": "1211200",
             "Duration": 0
         },
         {
