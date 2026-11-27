@@ -45,16 +45,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "sysDevicesSystemCpuCpu0CoreCtlMinCpus",
-            "Path": "/sys/devices/system/cpu/cpu0/core_ctl/min_cpus",
-            "Values": [
-                "1",
-                "3"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
             "Name": "procSysWaltSchedBusyHysteresisEnableCpus",
             "Path": "/proc/sys/walt/sched_busy_hysteresis_enable_cpus",
             "Values": [
@@ -481,12 +471,6 @@
             "PowerHint": "INTERACTION",
             "Node": "procSysWaltSchedBoost",
             "Value": "2",
-            "Duration": 0
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "sysDevicesSystemCpuCpu0CoreCtlMinCpus",
-            "Value": "3",
             "Duration": 0
         },
         {
